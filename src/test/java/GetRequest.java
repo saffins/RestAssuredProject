@@ -28,7 +28,7 @@ public class GetRequest {
 	public static void main(String[] args) {
 
 		Response res = given().header("Authorization", "Bearer sk_test_0ZxjsFkR2H6ptF6zf1IgabZq00HG5r99yV")
-				.get("https://api.stripe.com/v1/customers/cus_G2PZrynp2Qq7bL");
+				.get("https://api.stripe.com/v1/customers");
 
 		res.prettyPrint();
 
