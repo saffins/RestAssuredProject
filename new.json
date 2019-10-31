@@ -1,0 +1,27 @@
+{
+   "firstname":"saffin",
+   "lastName":"shivani",
+   
+   
+   "mobile":[144444,121212],
+   "education":[
+   {
+   
+   
+         "course":"mtech",
+         "marks":44
+   
+   
+   },
+   {
+   
+      "course":"btech",
+      "marks":40
+      
+   }
+   ]
+
+
+
+
+}

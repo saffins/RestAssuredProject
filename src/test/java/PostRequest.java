@@ -2,6 +2,7 @@
 import static io.restassured.RestAssured.given;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import io.restassured.http.ContentType;
@@ -44,13 +45,19 @@ public class PostRequest {
 
 	public static void postUsingJSONFile() {
 
-		HashMap<String, String> hm = new HashMap<>();
+		HashMap<String, Object> hm = new HashMap<>();
 
 		hm.put("email", "eve.holt@reqres.in");
 		hm.put("firstName", "pistol");
 		hm.put("lastname", "pistol");
-
-		Response response = given().contentType(ContentType.JSON).body(new File("./users.json"))
+		
+		ArrayList<Integer> mobile = new ArrayList<>();
+		mobile.add(122211);
+		mobile.add(44444);
+		
+		hm.put("mobile", mobile);
+		
+		Response response = given().contentType(ContentType.JSON).body(new File("./new.json"))
 				.post("http://localhost:8080/api/users");
 
 		response.prettyPrint();

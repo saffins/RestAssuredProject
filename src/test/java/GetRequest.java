@@ -31,6 +31,7 @@ public class GetRequest {
 				.get("https://api.stripe.com/v1/customers");
 
 		res.prettyPrint();
+		
 
 	}
 
